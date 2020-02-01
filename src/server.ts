@@ -6,7 +6,7 @@ import cors from 'cors';
 
 import sendWelcomeEmail from './send-welcome-email';
 
-if (!process.env.MAILJET_KEY || !process.env.MAILJET_SECRET) {
+if (!process.env.MAILJET_KEY || !process.env.MAILJET_SECRET || !process.env.SENDER_EMAIL) {
   console.error('Please prove mailjet details in your .env file (see .env.example).');
   process.exit(1);
 }

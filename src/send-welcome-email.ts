@@ -9,7 +9,7 @@ export default (email: String): Promise<any> =>
       "Messages":[
         {
           "From": {
-            "Email": email,
+            "Email": process.env.SENDER_EMAIL,
           },
           "To": [
             {
