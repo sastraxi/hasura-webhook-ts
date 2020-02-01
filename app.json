@@ -1,0 +1,21 @@
+{
+  "name": "Hasura Webhook Sample (typescript)",
+  "description": "",
+  "repository": "https://github.com/sastraxi/hasura-webhook-ts",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "typescript", "mailjet"],
+  "env": {
+    "WEBHOOK_SECRET": {
+      "description": "A secret key to share with Hasura",
+      "generator": "secret"
+    },
+    "MAILJET_KEY": {
+      "description": "Mailjet API key",
+      "required": true
+    },
+    "MAILJET_SECRET": {
+      "description": "Mailjet secret",
+      "required": true
+    }
+  }
+}
