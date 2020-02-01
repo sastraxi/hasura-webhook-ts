@@ -18,7 +18,7 @@ export default (email: String): Promise<any> =>
           ],
           "Subject": "Welcome to the world of Hasura!",
           "TextPart": "When in doubt, push responsibility to the frontend and to your database.",
-          "HTMLPart": "<h3>Some advice...</h3><p><b>When in doubt<b>, push responsibility to the <em>frontend</em> and to your <em>database</em></p>.",
+          "HTMLPart": "<h3>Some advice...</h3><p><b>When in doubt</b>, push responsibility to the <em>frontend</em> and to your <em>database</em></p>.",
           "CustomID": "hasura-webhook-ts"
         }
       ]
