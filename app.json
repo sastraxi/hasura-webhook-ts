@@ -4,6 +4,11 @@
   "repository": "https://github.com/sastraxi/hasura-webhook-ts",
   "logo": "https://node-js-sample.herokuapp.com/node.png",
   "keywords": ["node", "express", "typescript", "mailjet"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+  ],
   "env": {
     "WEBHOOK_SECRET": {
       "description": "A secret key to share with Hasura",
