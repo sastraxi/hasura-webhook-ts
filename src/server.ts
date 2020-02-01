@@ -28,7 +28,7 @@ app.post('/', async (req, res) => {
   console.log(JSON.stringify(req.body, null, 2));
   console.log('****************');
 
-  const { new: { email } } = req.body;
+  const { email } = req.body.event.data.new;
   console.log('got email', email);
 
   await sendWelcomeEmail(email);
