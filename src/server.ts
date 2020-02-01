@@ -23,8 +23,14 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  sendWelcomeEmail('sastraxi@gmail.com');
+app.get('/', async (req, res) => {
+  console.log('****************');
+  console.log(req.body);
+  console.log('****************');
+
+  const rs = await sendWelcomeEmail('sastraxi@gmail.com');
+  console.log(rs);
+  res.status(200).json({ status: 'OK' });
 });
 
 const port = process.env.PORT || 3000;
