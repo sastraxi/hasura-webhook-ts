@@ -9,13 +9,11 @@ export default (email: String): Promise<any> =>
       "Messages":[
         {
           "From": {
-            "Email": "sastraxi+maijet@gmail.com",
-            "Name": "Cameron"
+            "Email": email,
           },
           "To": [
             {
-              "Email": email,
-              "Name": "Cameron"
+              "Email": email
             }
           ],
           "Subject": "Welcome to the world of Hasura!",
