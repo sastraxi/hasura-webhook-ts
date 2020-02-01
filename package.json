@@ -20,16 +20,16 @@
     "@types/node-mailjet": "^3.3.2",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
-    "dotenv": "^6.2.0",
-    "express": "^4.16.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "node-mailjet": "^3.3.1",
     "ts-node": "^8.6.2"
   },
   "devDependencies": {
-    "dotenv-cli": "^1.4.0",
-    "nodemon": "^1.18.9",
+    "dotenv-cli": "^3.1.0",
+    "nodemon": "^2.0.2",
     "tslint": "^5.12.1",
-    "tslint-config-airbnb": "^5.11.1",
-    "typescript": "^3.3.1"
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.7.5"
   }
 }
