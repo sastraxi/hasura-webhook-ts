@@ -25,11 +25,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/', async (req, res) => {
   console.log('****************');
-  console.log(req.body);
+  console.log(JSON.stringify(req.body, null, 2));
   console.log('****************');
 
-  const rs = await sendWelcomeEmail('sastraxi@gmail.com');
-  console.log(rs);
+  const { new: { email } } = req.body;
+  console.log('got email', email);
+
+  await sendWelcomeEmail(email);
   res.status(200).json({ status: 'OK' });
 });
 
