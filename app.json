@@ -13,14 +13,6 @@
     "WEBHOOK_SECRET": {
       "description": "A secret key to share with Hasura",
       "generator": "secret"
-    },
-    "MAILJET_KEY": {
-      "description": "Mailjet API key",
-      "required": true
-    },
-    "MAILJET_SECRET": {
-      "description": "Mailjet secret",
-      "required": true
     }
   }
 }
