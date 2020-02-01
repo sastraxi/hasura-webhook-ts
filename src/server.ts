@@ -1,9 +1,10 @@
 import 'dotenv/config';
 
 import express from 'express';
-import session from 'express-session';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+
+import sendWelcomeEmail from './send-welcome-email';
 
 if (!process.env.MAILJET_KEY || !process.env.MAILJET_SECRET) {
   console.error('Please prove mailjet details in your .env file (see .env.example).');
@@ -11,17 +12,6 @@ if (!process.env.MAILJET_KEY || !process.env.MAILJET_SECRET) {
 }
 
 const app = express();
-
-app.use(session({
-  name: 'sid',
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 120,
-  },
-  rolling: true,
-}));
 
 app.use(
   cors({
@@ -34,7 +24,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-
+  sendWelcomeEmail('sastraxi@gmail.com');
 });
 
 const port = process.env.PORT || 3000;
