@@ -5,10 +5,8 @@ import session from 'express-session';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
-import knex from './knex';
-
-if (!process.env.SESSION_SECRET) {
-  console.error('Please prove a SESSION_SECRET in your .env file.');
+if (!process.env.MAILJET_KEY || !process.env.MAILJET_SECRET) {
+  console.error('Please prove mailjet details in your .env file (see .env.example).');
   process.exit(1);
 }
 
@@ -36,9 +34,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.status(200).json({
-    status: 'Ready to build something awesome?',
-  });
+
 });
 
 const port = process.env.PORT || 3000;
